@@ -4,4 +4,6 @@ module com.mycompany.facturapyme {
 
     opens com.mycompany.facturapyme to javafx.fxml;
     exports com.mycompany.facturapyme;
+    
+    opens clases to javafx.base;
 }

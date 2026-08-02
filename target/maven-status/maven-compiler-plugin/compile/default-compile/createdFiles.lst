@@ -1,3 +1,8 @@
+clases\GestorClientes.class
 com\mycompany\facturapyme\MainLayoutController.class
+com\mycompany\facturapyme\formularioEditarClienteController.class
+com\mycompany\facturapyme\ClientesController.class
 module-info.class
 com\mycompany\facturapyme\App.class
+clases\Cliente.class
+com\mycompany\facturapyme\formularioAgregarClienteController.class

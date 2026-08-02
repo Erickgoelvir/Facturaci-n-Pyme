@@ -18,9 +18,11 @@ public class App extends Application {
 
     private static Scene scene;
     private static AnchorPane contenedorVistas;
+    public static Stage ventana;
 
     @Override
     public void start(Stage stage) throws IOException {
+        ventana = stage;
         Parent root = loadFXML("primary");
         Scene scene = new Scene(root);
         stage.setScene(scene);
