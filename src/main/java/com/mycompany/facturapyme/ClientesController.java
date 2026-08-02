@@ -60,9 +60,10 @@ public class ClientesController implements Initializable{
     public void buscar() {
         
         if (!txtFiltro.getText().isEmpty()) {
+            listaFiltradaClientes.clear();
             String nombre = txtFiltro.getText();
             for (Cliente c: listaClientes){
-                if(c.getNombre().equals(nombre.toLowerCase())) {
+                if(c.getNombre().toLowerCase().equals(nombre.toLowerCase())) {
                     listaFiltradaClientes.add(c);
                 }
             }

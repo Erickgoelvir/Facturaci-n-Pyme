@@ -59,7 +59,8 @@ public class formularioAgregarClienteController implements Initializable{
             return;
         }
 
-        Cliente cliente = new Cliente(nombre, rtn, direccion, telefono, email);
+        //String nombre, String rtn, String direccion, String correo, String telefono
+        Cliente cliente = new Cliente(nombre, rtn,direccion, email, telefono);
         listaClientes.add(cliente);
     }
     
