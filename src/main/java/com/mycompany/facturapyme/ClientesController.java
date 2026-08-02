@@ -9,6 +9,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import clases.Cliente;
 import clases.GestorClientes;
+import clases.GestorFacturacion;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -92,9 +93,9 @@ public class ClientesController implements Initializable{
         Cliente seleccionado = tblClientes.getSelectionModel().getSelectedItem();
         if (seleccionado == null) return;
 
-        /*if (GestorFacturacion.getInstancia().clienteTieneFacturas(seleccionado)) {
+        if (GestorFacturacion.getInstancia().clienteTieneFacturas(seleccionado)) {
             mostrarAlerta(AlertType.ERROR, "Error Eliminar Cliente", "El cliente tiene facturas");
-        }*/
+        }
 
         listaClientes.remove(seleccionado);
     }

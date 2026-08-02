@@ -5,6 +5,8 @@
 package com.mycompany.facturapyme;
 
 import clases.Categoria;
+import clases.GestorFacturacion;
+import clases.GestorProductos;
 import clases.Producto;
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,7 +15,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -27,7 +28,6 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 /**
@@ -70,11 +70,12 @@ public class ProductosController implements Initializable {
     private TableView<Producto> tblInventario;
 
     
-    private ObservableList<Producto> inventario = FXCollections.observableArrayList();
+    private ObservableList<Producto> inventario;
    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+       inventario = GestorProductos.getInstance().getListaCompartida();
        colCodigo.setCellValueFactory(new PropertyValueFactory("codigo"));
        colNombre.setCellValueFactory(new PropertyValueFactory("nombre"));
        colDescripcion.setCellValueFactory(new PropertyValueFactory("descripcion"));
@@ -83,7 +84,6 @@ public class ProductosController implements Initializable {
        colStock.setCellValueFactory(new PropertyValueFactory("stock"));
        
        tblInventario.setItems(inventario);
-       cargarProductos();
        verificarStockBajo();
     }
     
@@ -105,11 +105,11 @@ public class ProductosController implements Initializable {
             mostrarAlerta("Error", "Debe seleccionar un producto primero.", Alert.AlertType.ERROR);
             return;
         }
-        /*
-        if (GestorFacturacion.getInstancia().productoEstaEnUso(seleccionado)) {
+        
+        if (GestorFacturacion.getInstancia().productoEstaEnUso(producto)) {
             mostrarAlerta("ERROR", "El producto esta en uso", AlertType.ERROR);
             return;
-        }*/
+        }
         
         try(FileWriter citas = new FileWriter(archivoInventario, false);
                 PrintWriter escritor = new PrintWriter(citas)){

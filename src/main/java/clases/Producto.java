@@ -80,22 +80,15 @@ public class Producto {
     
     @Override
     public boolean equals(Object obj){
-        if(this == obj){
-            return true;
-        }
-        
-        if(obj == null || getClass() != obj.getClass()){
-            return false;
-        }
-        
-        Producto other = (Producto) obj;
-        
-        return Objects.equals(this.codigo, other.codigo);
+        if (this == obj) return true;
+        if (!(obj instanceof Producto)) return false;
+        Producto otro = (Producto) obj;
+        return this.getCodigo().equals(otro.getCodigo());
     }
     
     @Override
     public int hashCode(){
-        return Objects.hash(codigo);
+        return getCodigo().hashCode();
     }
     
     @Override

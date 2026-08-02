@@ -9,34 +9,46 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.facturapyme.ReportesController">
    <children>
       <Label layoutX="20.0" layoutY="1.0" text="Reportes de Facturación">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TableView layoutX="21.0" layoutY="107.0" prefHeight="254.0" prefWidth="558.0">
+
+      <Label layoutX="13.0" layoutY="38.0" text="Cliente" />
+      <ComboBox fx:id="cboFiltroCliente" layoutX="13.0" layoutY="60.0" prefHeight="25.0" prefWidth="115.0" promptText="Todos" />
+
+      <Label layoutX="135.0" layoutY="38.0" text="Estado" />
+      <ComboBox fx:id="cboFiltroEstado" layoutX="135.0" layoutY="60.0" prefHeight="25.0" prefWidth="131.0" promptText="Todos" />
+
+      <Label layoutX="278.0" layoutY="38.0" text="Desde" />
+      <DatePicker fx:id="dpDesde" layoutX="278.0" layoutY="60.0" prefHeight="25.0" prefWidth="115.0" />
+
+      <Label layoutX="400.0" layoutY="38.0" text="Hasta" />
+      <DatePicker fx:id="dpHasta" layoutX="400.0" layoutY="60.0" prefHeight="25.0" prefWidth="115.0" />
+
+      <Button layoutX="523.0" layoutY="60.0" mnemonicParsing="false" onAction="#filtrar" prefHeight="25.0" prefWidth="71.0" text="Filtrar" />
+
+      <Label layoutX="14.0" layoutY="101.0" text="Total facturado en el período: L." />
+      <Label fx:id="lblTotalFacturado" layoutX="212.0" layoutY="100.0" text="0.00">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+
+      <TableView fx:id="tblFacturas" layoutX="13.0" layoutY="130.0" prefHeight="219.0" prefWidth="581.0">
         <columns>
-          <TableColumn prefWidth="113.0" text="N° Factura" />
-          <TableColumn prefWidth="106.0" text="Cliente" />
-            <TableColumn prefWidth="123.0" text="Fecha" />
-            <TableColumn prefWidth="104.0" text="Estado" />
-            <TableColumn prefWidth="111.0" text="Total" />
+          <TableColumn fx:id="colNumFactura" prefWidth="76.0" text="N° Factura" />
+          <TableColumn fx:id="colCliente" prefWidth="181.0" text="Cliente" />
+            <TableColumn fx:id="colFecha" prefWidth="105.0" text="Fecha" />
+            <TableColumn fx:id="colEstado" prefWidth="113.0" text="Estado" />
+            <TableColumn fx:id="colTotal" prefWidth="105.0" text="Total" />
         </columns>
       </TableView>
-      <Button layoutX="20.0" layoutY="367.0" mnemonicParsing="false" text="Ver detelle de factura" />
-      <Button layoutX="157.0" layoutY="367.0" mnemonicParsing="false" text="Exportar resumen a .txt" />
-      <ComboBox layoutX="20.0" layoutY="49.0" prefHeight="25.0" prefWidth="110.0" promptText="Elegir" />
-      <DatePicker layoutX="254.0" layoutY="49.0" prefHeight="25.0" prefWidth="121.0" />
-      <Label layoutX="20.0" layoutY="28.0" text="Cliente" />
-      <Label layoutX="139.0" layoutY="28.0" text="Estado" />
-      <Label layoutX="254.0" layoutY="28.0" text="Desde" />
-      <Label layoutX="379.0" layoutY="28.0" text="Hasta" />
-      <ComboBox layoutX="138.0" layoutY="49.0" prefHeight="25.0" prefWidth="110.0" promptText="Elegir" />
-      <DatePicker layoutX="379.0" layoutY="49.0" prefHeight="25.0" prefWidth="121.0" />
-      <Button layoutX="504.0" layoutY="49.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Filtrar" />
-      <Label layoutX="20.0" layoutY="81.0" text="Total facturado en el periodo: L." />
-      <Label layoutX="193.0" layoutY="81.0" text="____" />
+
+      <Button layoutX="13.0" layoutY="356.0" mnemonicParsing="false" onAction="#verDetalle" prefHeight="30.0" prefWidth="151.0" text="Ver detalle de factura" />
+      <Button layoutX="183.0" layoutY="356.0" mnemonicParsing="false" onAction="#exportarTxt" prefHeight="30.0" prefWidth="161.0" text="Exportar resumen a .txt" />
    </children>
 </AnchorPane>

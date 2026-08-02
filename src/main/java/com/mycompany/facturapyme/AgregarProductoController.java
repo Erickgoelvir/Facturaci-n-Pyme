@@ -5,6 +5,7 @@
 package com.mycompany.facturapyme;
 
 import clases.Categoria;
+import clases.GestorProductos;
 import clases.Producto;
 import java.io.BufferedReader;
 import java.io.File;
@@ -56,7 +57,7 @@ public class AgregarProductoController implements Initializable {
     
     private ObservableList<Categoria> listaCategorias = FXCollections.observableArrayList();
     
-    private ObservableList<Producto> inventario = FXCollections.observableArrayList();
+    private ObservableList<Producto> inventario = GestorProductos.getInstance().getListaCompartida();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -80,8 +81,6 @@ public class AgregarProductoController implements Initializable {
         } catch (IOException e) {
             mostrarAlerta("Error de Archivo", "No se pudieron inicializar los archivos de base de datos: " + e.getMessage(), AlertType.ERROR);
         }
-        
-        cargarProductos();
     }   
     
     @FXML
