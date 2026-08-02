@@ -95,6 +95,7 @@ public class ClientesController implements Initializable{
 
         if (GestorFacturacion.getInstancia().clienteTieneFacturas(seleccionado)) {
             mostrarAlerta(AlertType.ERROR, "Error Eliminar Cliente", "El cliente tiene facturas");
+            return;
         }
 
         listaClientes.remove(seleccionado);
