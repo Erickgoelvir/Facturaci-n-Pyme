@@ -78,4 +78,12 @@ public class Cliente {
     public int hashCode() {
         return rtn.hashCode();
     }
+    
+    //String nombre, String rtn, String direccion, String correo, String telefono
+    @Override
+    public String toString() {
+        
+        return nombre+";"+rtn+";"+direccion+";"+correo+";"+telefono+"\n";
+    
+    }
 }

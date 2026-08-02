@@ -1,8 +1,13 @@
 clases\GestorClientes.class
+com\mycompany\facturapyme\AgregarProductoController.class
 com\mycompany\facturapyme\MainLayoutController.class
 com\mycompany\facturapyme\formularioEditarClienteController.class
+clases\Categoria.class
+clases\Producto.class
 com\mycompany\facturapyme\ClientesController.class
 module-info.class
 com\mycompany\facturapyme\App.class
+com\mycompany\facturapyme\ProductosController.class
 clases\Cliente.class
+com\mycompany\facturapyme\EditarStockPrecioController.class
 com\mycompany\facturapyme\formularioAgregarClienteController.class

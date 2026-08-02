@@ -5,11 +5,13 @@
 package com.mycompany.facturapyme;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import clases.Cliente;
 import clases.GestorClientes;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -43,11 +45,18 @@ public class ClientesController implements Initializable{
     
     private ObservableList<Cliente> listaClientes;
     private ObservableList<Cliente> listaFiltradaClientes;
+    
+    private static final String RUTA_ARCHIVO = "clientes.txt";
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         listaClientes = GestorClientes.getInstance().getListaCompartida();
         listaFiltradaClientes = FXCollections.observableArrayList();
+        
+        listaClientes.addListener((javafx.collections.ListChangeListener.Change<? extends Cliente> c) -> {
+            guardarEnArchivo();
+        });
+        
         tblClientes.setItems(listaClientes);
         colNombre.setCellValueFactory(new PropertyValueFactory("nombre"));
         colRtn.setCellValueFactory(new PropertyValueFactory("rtn"));
@@ -120,5 +129,15 @@ public class ClientesController implements Initializable{
         alert.initOwner(App.ventana);
         alert.showAndWait();
         
+    }
+    
+        private void guardarEnArchivo() {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(RUTA_ARCHIVO, false))) {
+            for (Cliente c : listaClientes) {
+                writer.write(c.toString());
+            }
+        } catch (IOException e) {
+            System.out.println("Error al guardar clientes: " + e.getMessage());
+        }
     }
 }
