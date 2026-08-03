@@ -51,6 +51,7 @@ public class ClientesController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        //GestorClientes.getInstance().getListaCompartida();
         listaClientes = GestorClientes.getInstance().getListaCompartida();
         listaFiltradaClientes = FXCollections.observableArrayList();
         

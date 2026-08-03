@@ -2,13 +2,11 @@
     -fx-background-color: #f4f6f9;
 }
 
-/* Título de cada pantalla ("Gestión de Clientes", etc.) */
 .titulo-vista {
     -fx-text-fill: #1e2638;
     -fx-font-weight: bold;
 }
 
-/* Campo de búsqueda */
 .input-busqueda {
     -fx-background-color: white;
     -fx-background-radius: 6px;
@@ -21,7 +19,6 @@
     -fx-border-color: #2563eb;
 }
 
-/* Botón azul (Buscar, Editar, Nuevo) */
 .btn-azul {
     -fx-background-color: #4a90d9;
     -fx-text-fill: white;
@@ -34,7 +31,6 @@
     -fx-background-color: #3a7bc0;
 }
 
-/* Botón rojo (Eliminar) */
 .btn-rojo {
     -fx-background-color: #d64545;
     -fx-text-fill: white;
@@ -47,7 +43,6 @@
     -fx-background-color: #b83838;
 }
 
-/* Tarjeta blanca que contiene la tabla */
 .tabla-datos {
     -fx-background-color: white;
     -fx-background-radius: 8px;

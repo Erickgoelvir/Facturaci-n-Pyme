@@ -1,6 +1,15 @@
+.fondo-contenido {
+    -fx-background-color: #f4f6f9;
+}
+
 .label-filtro {
     -fx-text-fill: #33415c;
     -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.titulo-vista {
+    -fx-text-fill: #1e2638;
     -fx-font-weight: bold;
 }
 
