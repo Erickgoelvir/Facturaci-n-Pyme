@@ -9,46 +9,46 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.facturapyme.ReportesController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="fondo-contenido" stylesheets="@../../../styles/reporte.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.facturapyme.ReportesController">
    <children>
-      <Label layoutX="20.0" layoutY="1.0" text="Reportes de Facturación">
+      <Label layoutX="20.0" layoutY="1.0" styleClass="titulo-vista" text="Reportes de Facturación">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
 
-      <Label layoutX="13.0" layoutY="38.0" text="Cliente" />
-      <ComboBox fx:id="cboFiltroCliente" layoutX="13.0" layoutY="60.0" prefHeight="25.0" prefWidth="115.0" promptText="Todos" />
+      <Label layoutX="14.0" layoutY="47.0" text="Cliente" />
+      <ComboBox fx:id="cboFiltroCliente" layoutX="14.0" layoutY="73.0" prefHeight="25.0" prefWidth="115.0" promptText="Todos" styleClass="campo-filtro" />
 
-      <Label layoutX="135.0" layoutY="38.0" text="Estado" />
-      <ComboBox fx:id="cboFiltroEstado" layoutX="135.0" layoutY="60.0" prefHeight="25.0" prefWidth="131.0" promptText="Todos" />
+      <Label layoutX="183.0" layoutY="47.0" text="Estado" />
+      <ComboBox fx:id="cboFiltroEstado" layoutX="183.0" layoutY="73.0" prefHeight="25.0" prefWidth="131.0" promptText="Todos" styleClass="campo-filtro" />
 
-      <Label layoutX="278.0" layoutY="38.0" text="Desde" />
-      <DatePicker fx:id="dpDesde" layoutX="278.0" layoutY="60.0" prefHeight="25.0" prefWidth="115.0" />
+      <Label layoutX="382.0" layoutY="47.0" text="Desde" />
+      <DatePicker fx:id="dpDesde" layoutX="383.0" layoutY="73.0" prefHeight="25.0" prefWidth="115.0" styleClass="campo-filtro" />
 
-      <Label layoutX="400.0" layoutY="38.0" text="Hasta" />
-      <DatePicker fx:id="dpHasta" layoutX="400.0" layoutY="60.0" prefHeight="25.0" prefWidth="115.0" />
+      <Label layoutX="586.0" layoutY="47.0" text="Hasta" />
+      <DatePicker fx:id="dpHasta" layoutX="586.0" layoutY="73.0" prefHeight="25.0" prefWidth="115.0" styleClass="campo-filtro" />
 
-      <Button layoutX="523.0" layoutY="60.0" mnemonicParsing="false" onAction="#filtrar" prefHeight="25.0" prefWidth="71.0" text="Filtrar" />
+      <Button layoutX="762.0" layoutY="73.0" mnemonicParsing="false" onAction="#filtrar" prefHeight="27.0" prefWidth="100.0" styleClass="btn-azul" text="Filtrar" />
 
-      <Label layoutX="14.0" layoutY="101.0" text="Total facturado en el período: L." />
-      <Label fx:id="lblTotalFacturado" layoutX="212.0" layoutY="100.0" text="0.00">
+      <Label layoutX="14.0" layoutY="119.0" styleClass="texto-destacado" text="Total facturado en el período: L." />
+      <Label fx:id="lblTotalFacturado" layoutX="290.0" layoutY="120.0" text="0.00">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
 
-      <TableView fx:id="tblFacturas" layoutX="13.0" layoutY="130.0" prefHeight="219.0" prefWidth="581.0">
+      <TableView fx:id="tblFacturas" layoutX="15.0" layoutY="153.0" prefHeight="366.0" prefWidth="870.0" styleClass="tabla-datos">
         <columns>
-          <TableColumn fx:id="colNumFactura" prefWidth="76.0" text="N° Factura" />
-          <TableColumn fx:id="colCliente" prefWidth="181.0" text="Cliente" />
-            <TableColumn fx:id="colFecha" prefWidth="105.0" text="Fecha" />
-            <TableColumn fx:id="colEstado" prefWidth="113.0" text="Estado" />
-            <TableColumn fx:id="colTotal" prefWidth="105.0" text="Total" />
+          <TableColumn fx:id="colNumFactura" prefWidth="105.0" text="N° Factura" />
+          <TableColumn fx:id="colCliente" prefWidth="216.0" text="Cliente" />
+            <TableColumn fx:id="colFecha" prefWidth="201.0" text="Fecha" />
+            <TableColumn fx:id="colEstado" prefWidth="184.0" text="Estado" />
+            <TableColumn fx:id="colTotal" prefWidth="163.0" text="Total" />
         </columns>
       </TableView>
 
-      <Button layoutX="13.0" layoutY="356.0" mnemonicParsing="false" onAction="#verDetalle" prefHeight="30.0" prefWidth="151.0" text="Ver detalle de factura" />
-      <Button layoutX="183.0" layoutY="356.0" mnemonicParsing="false" onAction="#exportarTxt" prefHeight="30.0" prefWidth="161.0" text="Exportar resumen a .txt" />
+      <Button layoutX="23.0" layoutY="548.0" mnemonicParsing="false" onAction="#verDetalle" prefHeight="35.0" prefWidth="180.0" styleClass="btn-secundario" text="Ver detalle de factura" />
+      <Button layoutX="255.0" layoutY="548.0" mnemonicParsing="false" onAction="#exportarTxt" prefHeight="35.0" prefWidth="192.0" styleClass="btn-secundario" text="Exportar resumen a .txt" />
    </children>
 </AnchorPane>

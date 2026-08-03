@@ -8,26 +8,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.facturapyme.ClientesController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="fondo-contenido" stylesheets="@../../../styles/clientes.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.facturapyme.ClientesController">
    <children>
-      <Label layoutX="20.0" layoutY="1.0" text="Gestion Cliente">
+      <Label layoutX="20.0" layoutY="1.0" styleClass="titulo-vista" text="Gestion Cliente">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtFiltro" layoutX="20.0" layoutY="35.0" prefHeight="25.0" prefWidth="175.0" />
-      <Button layoutX="207.0" layoutY="35.0" mnemonicParsing="false" onAction="#buscar" text="Buscar" />
-      <Button layoutX="315.0" layoutY="35.0" mnemonicParsing="false" onAction="#editarCliente" prefHeight="25.0" prefWidth="72.0" text="Editar" />
-      <TableView fx:id="tblClientes" layoutX="20.0" layoutY="85.0" prefHeight="298.0" prefWidth="558.0">
+      <TextField fx:id="txtFiltro" layoutX="20.0" layoutY="68.0" prefHeight="33.0" prefWidth="208.0" promptText="Buscar por nombre o RTN/NIT..." styleClass="input-busqueda" />
+      <Button layoutX="239.0" layoutY="68.0" mnemonicParsing="false" onAction="#buscar" prefHeight="33.0" prefWidth="72.0" styleClass="btn-azul" text="Buscar" />
+      <Button layoutX="499.0" layoutY="68.0" mnemonicParsing="false" onAction="#editarCliente" prefHeight="33.0" prefWidth="72.0" styleClass="btn-azul" text="Editar" />
+      <TableView fx:id="tblClientes" layoutX="20.0" layoutY="162.0" prefHeight="411.0" prefWidth="862.0" styleClass="tabla-datos">
         <columns>
-          <TableColumn fx:id="colNombre" prefWidth="113.0" text="Nombre" />
-          <TableColumn fx:id="colRtn" prefWidth="106.0" text="RTN / NIT" />
-            <TableColumn fx:id="colDireccion" prefWidth="123.0" text="Dirección" />
-            <TableColumn fx:id="colTelefono" prefWidth="104.0" text="Teléfono" />
-            <TableColumn fx:id="colEmail" prefWidth="111.0" text="Email" />
+          <TableColumn fx:id="colNombre" prefWidth="162.0" text="Nombre" />
+          <TableColumn fx:id="colRtn" prefWidth="139.0" text="RTN / NIT" />
+            <TableColumn fx:id="colDireccion" prefWidth="194.0" text="Dirección" />
+            <TableColumn fx:id="colTelefono" prefWidth="159.0" text="Teléfono" />
+            <TableColumn fx:id="colEmail" prefWidth="206.0" text="Email" />
         </columns>
       </TableView>
-      <Button layoutX="393.0" layoutY="35.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="25.0" prefWidth="72.0" text="Eliminar" />
-      <Button layoutX="471.0" layoutY="35.0" mnemonicParsing="false" onAction="#agregarCliente" prefHeight="25.0" prefWidth="107.0" text="+ Nuevo Cliente" />
+      <Button layoutX="611.0" layoutY="68.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="33.0" prefWidth="72.0" styleClass="btn-rojo" text="Eliminar" />
+      <Button layoutX="719.0" layoutY="68.0" mnemonicParsing="false" onAction="#agregarCliente" prefHeight="33.0" prefWidth="149.0" styleClass="btn-azul" text="+ Nuevo Cliente" />
    </children>
 </AnchorPane>

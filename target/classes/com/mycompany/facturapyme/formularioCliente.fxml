@@ -9,39 +9,61 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.facturapyme.formularioAgregarClienteController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="fondo-contenido" stylesheets="@../../../styles/formularios.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.facturapyme.formularioAgregarClienteController">
    <children>
-      <Label layoutX="37.0" layoutY="1.0" text="Cliente">
+      <Label layoutX="26.0" layoutY="1.0" styleClass="titulo-formulario" text="Cliente">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <VBox layoutX="37.0" layoutY="56.0" prefHeight="380.0" prefWidth="549.0" spacing="10.0" AnchorPane.bottomAnchor="61.0">
+      <VBox layoutX="26.0" layoutY="56.0" prefHeight="508.0" prefWidth="851.0" spacing="20.0" styleClass="tarjeta-formulario" AnchorPane.bottomAnchor="37.0">
          <children>
-            <Label text="Nombre:" />
-            <TextField fx:id="txtNombre" />
-            <Label text="Rtn:" />
-            <TextField fx:id="txtRtn" />
-            <Label text="Direccion:" />
-            <TextField fx:id="txtDireccion" />
-            <Label text="Correo" />
-            <TextField fx:id="txtCorreo" />
-            <Label text="telefono" />
-            <TextField fx:id="txtTelefono" />
-            <HBox prefHeight="31.0" prefWidth="549.0" spacing="150.0">
+            <VBox prefHeight="200.0" prefWidth="100.0" />
+            <Label styleClass="label-campo" text="Nombre:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="txtNombre" styleClass="campo-formulario" />
+            <Label styleClass="label-campo" text="Rtn:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="txtRtn" styleClass="campo-formulario" />
+            <Label styleClass="label-campo" text="Direccion:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="txtDireccion" styleClass="campo-formulario" />
+            <Label styleClass="label-campo" text="Correo">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="txtCorreo" styleClass="campo-formulario" />
+            <Label styleClass="label-campo" text="telefono">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="txtTelefono" styleClass="campo-formulario" />
+            <HBox prefHeight="31.0" prefWidth="549.0" spacing="250.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#regresar" prefHeight="25.0" prefWidth="91.0" text="Regresar" />
-                  <Button mnemonicParsing="false" onAction="#guardar" prefHeight="25.0" prefWidth="94.0" text="Guardar" />
+                  <Button mnemonicParsing="false" onAction="#regresar" prefHeight="39.0" prefWidth="103.0" styleClass="btn-cancelar" text="Regresar" />
+                  <Button mnemonicParsing="false" onAction="#guardar" prefHeight="25.0" prefWidth="94.0" styleClass="btn-enviar" text="Guardar" />
                </children>
                <VBox.margin>
                   <Insets />
                </VBox.margin>
                <padding>
-                  <Insets left="150.0" right="120.0" />
+                  <Insets left="200.0" right="150.0" />
                </padding>
             </HBox>
             <Label fx:id="lblError" />
          </children>
+         <padding>
+            <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
       </VBox>
    </children>
 </AnchorPane>

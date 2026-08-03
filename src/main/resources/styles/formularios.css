@@ -1,0 +1,67 @@
+.tarjeta-formulario {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #e3e7ed;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 2);
+}
+
+.titulo-formulario {
+    -fx-text-fill: #1e2638;
+    -fx-font-weight: bold;
+}
+
+.label-campo {
+    -fx-text-fill: #33415c;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.campo-formulario {
+    -fx-background-color: #f8f9fb;
+    -fx-background-radius: 6px;
+    -fx-border-color: #d5dae2;
+    -fx-border-radius: 6px;
+    -fx-padding: 7 10 7 10;
+    -fx-font-size: 13px;
+}
+.campo-formulario:focused {
+    -fx-border-color: #2563eb;
+    -fx-background-color: white;
+}
+
+.btn-enviar {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-padding: 9 9 9 9;
+}
+.btn-enviar:hover {
+    -fx-background-color: #1d4fd1;
+}
+
+.btn-cancelar {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 13px;
+    -fx-border-color: #d5dae2;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-padding: 9 24 9 24;
+}
+.btn-cancelar:hover {
+    -fx-text-fill: #1e2638;
+    -fx-border-color: #a0abbc;
+}
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 6px;
+    -fx-border-color: #d5dae2;
+    -fx-border-radius: 6px;
+    -fx-font-size: 13px;
+}

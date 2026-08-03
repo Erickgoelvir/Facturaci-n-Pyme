@@ -5,22 +5,44 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.facturapyme.AgregarProductoController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" styleClass="fondo-contenido" stylesheets="@../../../styles/formularios.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.facturapyme.AgregarProductoController">
    <children>
-      <Label layoutX="250.0" layoutY="14.0" text="Agregar Productos" />
-      <Label layoutX="53.0" layoutY="93.0" text="Nombre: " />
-      <Label layoutX="53.0" layoutY="58.0" text="Codigo:" />
-      <Label layoutX="53.0" layoutY="130.0" text="Descripcion:" />
-      <Label layoutX="53.0" layoutY="167.0" text="Categoria: " />
-      <Label layoutX="53.0" layoutY="206.0" text="Precio Unitario:" />
-      <Label layoutX="53.0" layoutY="245.0" text="Stock:" />
-      <TextField fx:id="txtCodigo" layoutX="144.0" layoutY="54.0" />
-      <TextField fx:id="txtNombre" layoutX="144.0" layoutY="89.0" />
-      <TextField fx:id="txtDescripcion" layoutX="144.0" layoutY="126.0" />
-      <TextField fx:id="txtPrecioUnitario" layoutX="144.0" layoutY="202.0" />
-      <TextField fx:id="txtStock" layoutX="144.0" layoutY="241.0" />
-      <ComboBox fx:id="cmbCategoria" layoutX="144.0" layoutY="163.0" prefWidth="150.0" />
-      <Button fx:id="btnAgregarProducto" layoutX="111.0" layoutY="302.0" mnemonicParsing="false" onAction="#agregarProducto" text="Agregar Producto" />
+      <Label layoutX="53.0" layoutY="7.0" styleClass="titulo-formulario" text="Agregar Productos">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="52.0" layoutY="131.0" styleClass="label-campo" text="Nombre: ">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="53.0" layoutY="58.0" styleClass="label-campo" text="Codigo:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="49.0" layoutY="196.0" styleClass="label-campo" text="Descripcion:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="53.0" layoutY="267.0" styleClass="label-campo" text="Categoria: ">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="54.0" layoutY="345.0" styleClass="label-campo" text="Precio Unitario:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="61.0" layoutY="418.0" styleClass="label-campo" text="Stock:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtCodigo" layoutX="58.0" layoutY="87.0" prefHeight="25.0" prefWidth="777.0" styleClass="campo-formulario" />
+      <TextField fx:id="txtNombre" layoutX="62.0" layoutY="156.0" prefHeight="25.0" prefWidth="777.0" styleClass="campo-formulario" />
+      <TextField fx:id="txtDescripcion" layoutX="62.0" layoutY="223.0" prefHeight="25.0" prefWidth="777.0" styleClass="campo-formulario" />
+      <TextField fx:id="txtPrecioUnitario" layoutX="62.0" layoutY="375.0" prefHeight="25.0" prefWidth="777.0" styleClass="campo-formulario" />
+      <TextField fx:id="txtStock" layoutX="62.0" layoutY="448.0" prefHeight="25.0" prefWidth="777.0" styleClass="campo-formulario" />
+      <ComboBox styleClass="combo-box" fx:id="cmbCategoria" layoutX="62.0" layoutY="300.0" prefHeight="25.0" prefWidth="287.0" promptText="Seleccionar" />
+      <Button fx:id="btnAgregarProducto" layoutX="373.0" layoutY="520.0" mnemonicParsing="false" onAction="#agregarProducto" prefHeight="37.0" prefWidth="154.0" styleClass="btn-enviar" text="Agregar Producto" />
    </children>
 </AnchorPane>

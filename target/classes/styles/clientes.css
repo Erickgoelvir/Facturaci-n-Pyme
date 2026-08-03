@@ -1,0 +1,93 @@
+.fondo-contenido {
+    -fx-background-color: #f4f6f9;
+}
+
+/* Título de cada pantalla ("Gestión de Clientes", etc.) */
+.titulo-vista {
+    -fx-text-fill: #1e2638;
+    -fx-font-weight: bold;
+}
+
+/* Campo de búsqueda */
+.input-busqueda {
+    -fx-background-color: white;
+    -fx-background-radius: 6px;
+    -fx-border-color: #d5dae2;
+    -fx-border-radius: 6px;
+    -fx-padding: 6 10 6 10;
+    -fx-font-size: 13px;
+}
+.input-busqueda:focused {
+    -fx-border-color: #2563eb;
+}
+
+/* Botón azul (Buscar, Editar, Nuevo) */
+.btn-azul {
+    -fx-background-color: #4a90d9;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-padding: 4 4 4 4;
+}
+.btn-azul:hover {
+    -fx-background-color: #3a7bc0;
+}
+
+/* Botón rojo (Eliminar) */
+.btn-rojo {
+    -fx-background-color: #d64545;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-padding: 4 4 4 4;
+}
+.btn-rojo:hover {
+    -fx-background-color: #b83838;
+}
+
+/* Tarjeta blanca que contiene la tabla */
+.tabla-datos {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #e3e7ed;
+    -fx-border-radius: 8px;
+    -fx-font-size: 13px;
+}
+.tabla-datos .column-header-background {
+    -fx-background-color: #eef1f5;
+    -fx-background-radius: 8px 8px 0 0;
+}
+.tabla-datos .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 34px;
+}
+.tabla-datos .column-header .label {
+    -fx-text-fill: #33415c;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER-LEFT;
+}
+.tabla-datos .table-row-cell {
+    -fx-background-color: white;
+    -fx-table-cell-border-color: transparent;
+    -fx-border-color: transparent transparent #eef1f5 transparent;
+}
+.tabla-datos .table-row-cell:odd {
+    -fx-background-color: #f8f9fb;
+}
+.tabla-datos .table-row-cell:selected {
+    -fx-background-color: #e3edfb;
+    -fx-text-fill: #1e2638;
+}
+.tabla-datos .table-cell {
+    -fx-text-fill: #33415c;
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 6 10 6 10;
+}
+
+.texto-footer {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 12px;
+}

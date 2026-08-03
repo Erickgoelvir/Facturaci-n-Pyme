@@ -1,0 +1,56 @@
+.label-filtro {
+    -fx-text-fill: #33415c;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.campo-filtro {
+    -fx-background-color: white;
+    -fx-background-radius: 6px;
+    -fx-border-color: #d5dae2;
+    -fx-border-radius: 6px;
+    -fx-font-size: 13px;
+}
+.campo-filtro:focused {
+    -fx-border-color: #2563eb;
+}
+
+.campo-filtro .list-cell,
+.campo-filtro .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #33415c;
+}
+.campo-filtro .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.texto-destacado {
+    -fx-text-fill: #2563eb;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.btn-azul {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-padding: 9 24 9 24;
+}
+
+.btn-secundario {
+    -fx-background-color: white;
+    -fx-text-fill: #33415c;
+    -fx-font-size: 13px;
+    -fx-border-color: #d5dae2;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-padding: 7 16 7 16;
+}
+.btn-secundario:hover {
+    -fx-border-color: #2563eb;
+    -fx-text-fill: #2563eb;
+}
